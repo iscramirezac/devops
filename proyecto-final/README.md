@@ -10,7 +10,7 @@ La configuración de un proxy inverso HTTPS de Nginx tiene ventajas significativ
 
 ## Diagrama del Proyecto
 El proyecto consta del siguiente diagrama:
-![Alt text](<Dibujo13 (4).png>)
+![Alt text](<Diagram.png>)
 
 ## Consideraciones
 Cada sitio es un contenedor:
