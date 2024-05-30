@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  reverse_proxy:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+
+  sitio1:
+  # sitio1.example.com
+    image: halcyonic:v1.0
+
+
+  sitio2:
+  # sitio2.example.com
+    image: multiverse:v1.0
