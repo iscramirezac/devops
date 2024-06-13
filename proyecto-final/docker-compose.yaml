@@ -12,9 +12,9 @@ services:
 
   sitio1:
   # sitio1.example.com
-    image: halcyonic:h-v1.0
+    image: halcyonic:hl-v1.0
 
 
   sitio2:
   # sitio2.example.com
-    image: multiverse:m-v1.0
+    image: multiverse:ml-v1.0
