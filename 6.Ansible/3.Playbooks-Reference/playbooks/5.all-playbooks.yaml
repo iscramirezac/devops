@@ -1,0 +1,7 @@
+#5.all-playbooks
+---
+  - ansible.builtin.import_playbook: 1.update.yaml
+  - ansible.builtin.import_playbook: 2.install_services.yaml
+  - ansible.builtin.import_playbook: 3.setup_app.yaml
+  - ansible.builtin.import_playbook: 4.setup_lb.yaml
+  - ansible.builtin.import_playbook: 6.check-status.yaml

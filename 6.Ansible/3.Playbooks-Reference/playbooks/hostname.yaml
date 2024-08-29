@@ -1,0 +1,6 @@
+- name: Get Hostname from Inventory
+  hosts: all
+  tasks:
+    - name: Print Hostname
+      debug:
+        var: ansible_hostname

@@ -1,0 +1,20 @@
+server {
+        listen 80;
+        server_name misitio1.example.com;
+        location / {              
+                proxy_set_header X-Forwarded-Host $host:$server_port;
+                proxy_set_header X-Forwarded-Server $host;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_pass http://192.168.0.201:80;
+        }
+}
+server {
+        listen 80;
+        server_name misitio2.example.com;
+        location / {                
+                proxy_set_header X-Forwarded-Host $host:$server_port;
+                proxy_set_header X-Forwarded-Server $host;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_pass http://192.168.0.202:80;
+        }
+}

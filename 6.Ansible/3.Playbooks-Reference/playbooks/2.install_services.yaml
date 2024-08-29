@@ -1,0 +1,21 @@
+#install_services.yaml
+---
+  - hosts: loadbalancers
+    become: true
+    
+    tasks:
+      - name: Installing Apache
+        apt: name=nginx state=present
+      
+      - name: Ensure Apache Starts
+        service: name=nginx state=started enabled=yes
+
+  - hosts: webservers
+    become: true 
+    tasks:
+      - name: Installing Services
+        apt:
+          name:
+            - apache2
+            - php
+          state: present

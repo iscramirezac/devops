@@ -1,0 +1,21 @@
+# setup-lb.yml
+---
+  - hosts: loadbalancers
+    become: true
+    tasks:
+      - name: Creating template
+        template:
+          src: ../config/lb-config.j2
+          dest:  /etc/nginx/sites-available/default
+          owner: bin
+          mode: 064
+        notify: restart nginx
+    
+      - name: Restart nginx
+        service:
+          name: nginx
+          state: restarted
+    
+    handlers:
+      - name: restart nginx
+        ansible.builtin.service: name=nginx state=restarted

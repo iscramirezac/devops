@@ -1,0 +1,8 @@
+#update.yaml
+---
+  - hosts: all
+    become: true
+    
+    tasks:
+      - name: Update apt-get repo and cache
+        apt: upgrade=dist force_apt_get=yes

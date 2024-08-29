@@ -1,0 +1,22 @@
+#setup_app.yaml
+---
+  - hosts: webservers
+    become: true
+    
+    tasks:
+      - name: Upload App File
+        copy:
+          src: ../config/index.php
+          dest: /var/www/html
+          mode: 0775
+      
+      - name: Configuring PHP ini 
+        ansible.builtin.lineinfile:
+          path: /etc/php/7.4/apache2/php.ini
+          regexp: ^short_open_tag
+          line: 'shor_open_tag=On'
+        notify: restart apache
+    
+    handlers:
+      - name: restart apache
+        ansible.builtin.service: name=apache2 state=restarted
