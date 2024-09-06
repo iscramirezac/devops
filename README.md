@@ -9,7 +9,7 @@ DevOps es una cultura y un conjunto de prácticas que unen el desarrollo de soft
 
 Aquí encontrarás guías y ejemplos sobre cómo utilizar herramientas de Infraestructura como Código (IaC) para configurar y gestionar tus entornos:
 
-- **Docker**: Contenedorización de aplicaciones.
+- **Docker**: Contenerización de aplicaciones.
 - **Kubernetes**: Orquestación de contenedores.
 - **Helm**: Automatización de aplicaciones complejas
 - **Terraform**: Automatización de infraestructura.
@@ -20,6 +20,12 @@ Aquí encontrarás guías y ejemplos sobre cómo utilizar herramientas de Infrae
 Implementar pipelines de CI/CD es esencial para un flujo de trabajo DevOps efectivo. Aquí aprenderás a configurar y utilizar herramientas para integrar y entregar tu código de manera continua:
 
 - **Jenkins**
+
+## Control de versiones
+
+El control de versiones es historial detallado de todos los cambios que haces en tus archivos o proyectos de DevOps. Te ayuda a colaborar con otros equipos sin interferir en tu trabajo y  permite volver a versiones anteriores si algo sale mal. Es una herramienta clave para mantener todo organizado y bajo control.
+
+- **Git**
 
 ## Contribuciones
 
